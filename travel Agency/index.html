@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+      En-tête du document :
+      - Inclusion de Bootstrap pour le style et la réactivité
+      - Inclusion des icônes Bootstrap
+      - Lien vers la feuille de style personnalisée
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+  <body class="dark">
+    <!--
+      HEADER :
+      Barre de navigation principale avec logo et liens vers les différentes sections du site.
+      Utilisation de Bootstrap pour la responsivité.
+    -->
+    <header>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="#">
+                    <img src="assets/images/logo.png" class="img-fluid" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ml-auto" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto me-5" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item py-2">
+                            <a class="nav-link " aria-current="page" href="#">Acceuil</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown py-lg-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Destinations
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Côte d'Ivoire</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">France</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Indonésie</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">États-Unis</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Grèce</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Italie</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Maldives</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Pérou</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Kenya</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Japon</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item py-2">
+                            <a class="nav-link" href="#">Visites</a>
+                        </li>
+                        <li class="nav-item py-2">
+                             <a class="nav-link " href="#" aria-disabled="true">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--
+      SECTION HERO :
+      Carousel Bootstrap affichant des images attractives avec titres et slogans pour inciter au voyage.
+      Chaque slide met en avant une destination phare.
+    -->
+    <section id="hero">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./assets/images/header-image/cote-divoire-aimer.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h5>Côte d’Ivoire</h5>
+                        <span ></span>
+                        <p class="carousel-attract-text">
+                            Partez à l’aventure en  nature, culture et émotions garanties ! <br>
+                            Voyagez autrement, vivez l’aventure de vos rêves !
+
+                        </p>
+                        <button type="button" class="btn btn-light">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="./assets/images/header-image/paris.png" class="d-block w-100" alt="..." >
+                    <div class="carousel-caption">
+                        <h5>Paris </h5>
+                        
+                        <p class="carousel-attract-text">
+                            laissez-vous séduire par la magie de la Ville Lumière <br>
+                            Découvrez des destinations inoubliables avec nous !
+
+                        </p>
+                        <button type="button" class="btn btn-light">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/header-image/usa.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h5>New York</h5>
+                        
+                        <p class="carousel-attract-text">
+                            Svibrez au rythme de la ville qui ne dort jamais ! <br>
+                            Explorez le monde, créez vos plus beaux souvenirs !
+                        </p>
+                        <button type="button" class="btn btn-light">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--
+      SECTION DESTINATIONS :
+      Présentation des destinations populaires sous forme de cartes.
+      Chaque carte contient une image, un titre, une description et un bouton d'action.
+    -->
+    <section id="destinations">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <span class="subtitle">
+                        Nos destinations les plus populaires
+                    </span>
+                    <h2 class="py-2 mb-5"> Explorez le monde avec nous</h2>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/New york.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>New York, USA</h3>
+                            <p>Découvrez la ville qui ne dort jamais. Gratte-ciels vertigineux, shopping, spectacles et énergie unique vous attendent.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Bali, Indonésie.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Bali, Indonésie</h3>
+                            <p>Plages paradisiaques, temples mystiques et couchers de soleil envoûtants… Bali est une invitation à la détente et à l’aventure.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Paris, France.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Paris, France</h3>
+                            <p>Ville de l’amour, de la mode et de la gastronomie. Flânez entre la Tour Eiffel, Montmartre et les cafés charmants.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Kenya, Afrique.avif" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Kenya, Afrique</h3>
+                            <p>Vivez l’émotion d’un safari authentique au cœur de la savane. Lions, éléphants et couchers de soleil inoubliables.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Machu Picchu, Pérou.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Machu Picchu, Pérou</h3>
+                            <p>Partez à l’aventure dans les Andes et explorez les mystères de la cité sacrée des Incas. Nature et histoire au sommet.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Santorin, Grèce.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Santorin, Grèce</h3>
+                            <p>Ses maisons blanches et ses dômes bleus surplombent une mer azur. Un décor de carte postale pour des vacances romantiques.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Toscane, Italie.jpg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Toscane, Italie</h3>
+                            <p>Collines verdoyantes, vignobles, villages médiévaux et cuisine exquise… La dolce vita à l’état pur.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="destination">
+                        <div class="destination-image">
+                            <img src="./assets/images/destination/Maldives.jpeg" alt="">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Maldives</h3>
+                            <p>Dormez sur l’eau, nagez avec les raies, vivez une escapade de luxe dans un cadre paradisiaque.</p>
+                            <button class="btn btn-outline-primary">Plus d'info</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+   <!--
+      SECTION VISITES :
+      Utilisation d'un accordéon Bootstrap pour présenter différents forfaits touristiques.
+      Chaque item contient un titre, une brève description et un lien pour plus de détails.
+    -->
+   <section class="visites">
+        <div class="container py-5">
+
+           <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center py-3">
+                        Packages de Voyage
+                    </h2>
+                </div>
+           </div>
+           <div class="row">
+        <div class="row">
+            <div class="accordion" id="accordionExample">
+
+                <!-- Forfait 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#circuit1" aria-expanded="true" aria-controls="circuit1">
+                        Séjour Magique à Paris & Châteaux de la Loire
+                        </button>
+                    </h2>
+                    <div id="circuit1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        Explorez Paris, la Ville Lumière, puis émerveillez-vous devant les somptueux châteaux de la Loire lors d’un circuit alliant culture, histoire et gastronomie.
+                        <br>
+                        <a href="#" class="btn btn-link mt-2">Afficher les détails</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forfait 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit2" aria-expanded="false" aria-controls="circuit2">
+                        Aventure Authentique en Côte d’Ivoire
+                        </button>
+                    </h2>
+                    <div id="circuit2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        Partez à la découverte des lagunes, des forêts tropicales et des villages traditionnels pour une immersion totale au cœur de l’Afrique de l’Ouest.
+                        <br>
+                        <a href="#" class="btn btn-link mt-2">Afficher les détails</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forfait 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit3" aria-expanded="false" aria-controls="circuit3">
+                        New York Express : L’Essentiel en 4 Jours
+                        </button>
+                    </h2>
+                    <div id="circuit3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        Vivez l’intensité de New York : Times Square, Central Park, Statue de la Liberté et bien plus encore lors d’un séjour urbain inoubliable.
+                        <br>
+                        <a href="#" class="btn btn-link mt-2">Afficher les détails</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forfait 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit4" aria-expanded="false" aria-controls="circuit4">
+                        Safari d’Exception au Kenya
+                        </button>
+                    </h2>
+                    <div id="circuit4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        Partez sur les traces des « Big Five » et vivez l’émotion d’un safari dans les plus belles réserves naturelles du Kenya.
+                        <br>
+                        <a href="#" class="btn btn-link mt-2">Afficher les détails</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forfait 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit5" aria-expanded="false" aria-controls="circuit5">
+                        Japon : Entre Tradition et Modernité
+                        </button>
+                    </h2>
+                    <div id="circuit5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        Voyagez du Japon ancestral de Kyoto à l’effervescence futuriste de Tokyo pour une expérience unique entre temples, jardins et technologies.
+                        <br>
+                        <a href="#" class="btn btn-link mt-2">Afficher les détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+   <!--
+      SECTION CONTACT :
+      Informations de contact et formulaire pour envoyer un message à l'agence.
+      Présente aussi les coordonnées et l'adresse.
+    -->
+   <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row align-item-center g-5">
+                        <div class="col-lg-4 col-12 oder-2 pt-3 m-auto">
+                            
+                            <div class="mb-5">
+                                <h5 class="subtitle">
+                                    Information de Contact
+                                </h5>
+                            </div>
+                            <ul class="contact-info ps-0 t-4">
+                                <li class="contact-item mb-4">
+                                    <div class="my-auto">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h5>Toll Free Customer Care</h5>
+                                        <span>+977 ..........</span>
+                                    </div>
+                                </li>
+                                
+                                <li class="contact-item mb-4">
+                                    <div class="my-auto">
+                                        <i class="bi bi-chat-left-dots-fill"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h5>Need live support?</h5>
+                                        <span>melvin@exemple.com</span>
+                                    </div>
+                                </li>
+                                <li class="contact-item mb-4">
+                                    <div class="my-auto">
+                                        <i class="bi bi-pin-map"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <h5>Location</h5>
+                                        <span>Thamel, Katchmandu, Nepal</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-8 col-12 order-lg-2">
+                            <div class="card bg-transparent border-0">
+                                 <div class="card-body">
+                                     <form class="row needs-validation g-3" novalidate="" id="contact-form" method="POST"
+                                        action="#">
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <h5 class="subtitle">
+                                                    Leave a Message
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label for="ScheduleFirstnameInput" class="form-label">
+                                                First Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="ScheduleFirstnameInput"
+                                                required="" placeholder="Enter Your First Name">
+                                            <div class="invalid-feedback">Please enter firstname.</div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label for="scheduleLastnameInput" class="form-label">
+                                                Last Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="scheduleLastnameInput"
+                                                required="" placeholder="Enter Your First Name">
+                                            <div class="invalid-feedback">Please enter lastname.</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="scheduleEmailInput" class="form-label">
+                                                Email
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="scheduleEmailInput" required=""
+                                                placeholder="Enter Your First Email">
+                                            <div class="invalid-feedback">Please enter email.</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="scheduleTextarea" class="form-label">Message</label>
+                                            <textarea class="form-control" id="scheduleTextarea" rows="7" required=""
+                                                placeholder="Your Message"></textarea>
+                                            <div class="invalid-feedback">Please write message.</div>
+                                        </div>
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary border-0" type="submit">Send Message</button>
+                                        </div>
+                                        <div class="loader">
+                                            <i class="lni lni-spinner-solid"></i>
+                                        </div>
+                                        <div class="form-message"></div>
+                                    </form>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+   <!--
+      FOOTER :
+      Pied de page avec logo, liens de navigation supplémentaires et réseaux sociaux.
+      Mention légale de copyright.
+    -->
+   <footer>
+        <div class="container text-center ">
+            <div class="row align-items-center mb-6">
+                <div class="col-12 text-md-start d-flex justify-content-center  px-0">
+                    <img src="assets/images/logo.png" alt="">
+                </div>
+                <div class=" col-md-12 d-none d-md-block text-center">
+                    <ul class=" footer-nav list-inline mb-0 d-flex justify-content-end py-3 gap-3">
+                        <li class="list-iline-item ">
+                            <a href="#">Politique de confidentialité</a>
+                        </li>
+                        <li class="list-iline-item">
+                            <a href="#">Conditions d'utilisation</a>
+                        </li>
+                        <li class="list-iline-item">
+                            <a href="#">Droits d'auteur</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-6 text-start copyright ">
+                    © 2025 Agence Voyage Horizon. Tous droits réservés.
+                </div>
+                <div class="col-12 col-md-6 text-center  text-md-end px-0 ">
+                    <ul class="list-inline mb-0 social-item">
+                        <li class="list-inline-item social-item">
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                        </li>
+                        <li class="list-inline-item social-item">
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                        </li>
+                        <li class="list-inline-item social-item">
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </footer>
+    <!--
+      Inclusion du script Bootstrap JS pour les composants interactifs
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

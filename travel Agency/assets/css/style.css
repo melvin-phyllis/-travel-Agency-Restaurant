@@ -1,0 +1,313 @@
+/*
+  Importation de la police Poppins depuis Google Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/*
+  RESET CSS :
+  Suppression des marges et paddings par défaut, gestion du box-sizing
+*/
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  Défilement fluide pour les ancres
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*
+  VARIABLES CSS :
+  Définition des couleurs principales pour le mode sombre et clair
+*/
+body.dark {
+    --bg-color1: #292a2d;
+    --bg-color2: #161618;
+    --color1: #FFF;
+    --color2: #DDD;
+}
+
+body:not(.dark) {
+    --bg-color1: #fbfdff;
+    --bg-color2: #eaeae9;
+    --color1: #3e4455;
+    --color2: #000;
+}
+
+/*
+  TITRES :
+  Styles pour les titres principaux et secondaires
+*/
+h1,
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color1);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h6 {
+    color: var(--color1);
+    font-weight: 700;
+}
+
+/*
+  LIENS ET IMAGES :
+  Suppression du soulignement et adaptation des images
+*/
+a {
+    text-decoration: none;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+  POLICE GÉNÉRALE
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+  NAVBAR :
+  Styles pour la barre de navigation et ses éléments
+*/
+nav {
+    background-color: #fff;
+}
+
+.navbar-top {
+    background: var(--bg-color2);
+}
+
+.navbar-top a,
+.navbar-top i {
+    color: #fff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    height: auto;
+}
+.nav-link:hover{
+    color: #5c4545;
+}
+.nav-link,
+.dropdown-item {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #3e4455;
+}
+
+.dropdown>.dropdown-menu {
+    background-color: #FFF;
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-item:hover {
+    color: #FFF;
+    background-color: #2a3a32;
+}
+
+/*
+  BOUTON PRINCIPAL
+*/
+.btn-outline-primary {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+/*
+  CAROUSEL :
+  Styles pour les flèches, le texte et l'adaptation mobile
+*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4); /* optionnel */
+    border-radius: 50%; /* arrondi */
+    padding: 10px;
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+
+.carousel-caption h5 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.carousel-item img {
+    height: 870px;
+  }
+
+/* Responsive : adaptation du carousel sur mobile */
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 1px;
+    transform: none;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem; /* plus petit sur mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  .carousel-item img {
+    height: 200px;
+  }
+
+  .carousel-attract-text {
+    font-size: 1px ;
+    
+    padding: auto;
+   
+  }
+}
+
+/*
+  SECTIONS DESTINATIONS ET VISITES :
+  Fond spécifique pour ces sections
+*/
+#destinations,
+.visites {
+    background-color: var(--bg-color2);
+}
+
+/*
+  SECTION CONTACT :
+  Fond et styles pour les infos de contact
+*/
+.contact {
+    background-color: var(--bg-color2);
+}
+
+.destination-info,
+.subtitle {
+    color: #FFF;
+}
+
+/*
+  LISTE DES CONTACTS :
+  Affichage en flex et espacements
+*/
+.contact-info li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact-detail h5 {
+    font-size: 1rem;
+    color: var(--color1)
+}
+
+.contact-detail span {
+    color: var(--color1)
+}
+
+.contact-item i {
+    color: var(--color1);
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 30px;
+}
+
+#contact,
+.form-label {
+    color: var(--color1);
+}
+
+/*
+  FOOTER :
+  Fond, logo et liens
+*/
+footer {
+    background-color: var(--bg-color1);
+}
+
+footer img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-nav a,
+.copyright {
+    color: var(--color1);
+}
+
+/*
+  DESTINATION INFO :
+  Permet d'aligner le bouton en bas à gauche du cadre
+*/
+.destination-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* place le contenu en bas */
+    align-items: flex-start;   /* aligne à gauche */
+    height: 100%;              /* s'assurer que le conteneur prend toute la hauteur */
+    /* Ajoutez un padding si besoin */
+}
+
+.destination-info button,
+.destination-info .btn {
+    margin-top: 16px; /* espace entre le contenu et le bouton */
+    align-self: flex-start; /* s'assure que le bouton reste à gauche */
+}
+
+.list-iline-item a:hover{
+    color: #5c4545;
+
+}
+
+.destination-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* pour que l'image remplisse le conteneur sans déformation */
+}
+
+@media (min-width: 768px) {
+  
+.carousel-attract-text {
+   
+    font-weight: bolder;
+    
+    color: #cccaca;
+    
+    background-color: hsla(0, 29%, 6%, 0.459);
+    margin-left: 30%;
+    margin-right: 30%;
+    }
+}
